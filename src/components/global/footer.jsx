@@ -168,40 +168,40 @@ const Footer = () => {
                         <Facebook
                             sx={{
                                 fontSize: "35px",
-                                color: "#7295bf",
+                                color: "#668ebf",
                                 cursor: "pointer",
                                 transition: "color 0.3s",
-                                border: "1px solid #1877F2",
+                                border: "1px solid #7295bf",
                                 borderRadius: "50%",
                                 padding: "8px",
                                 margin: "0 4px",
-                                "&:hover": { color: "#1877F2" },
+                                "&:hover": { color: "#1877F2",border: "1px solid #1877F2" },
                             }}
                         />
                         <Twitter
                             sx={{
                                 fontSize: "35px",
-                                color: "#7295bf",
+                                color: "#668ebf",
                                 cursor: "pointer",
                                 transition: "color 0.3s",
-                                border: "1px solid #1877F2",
+                                border: "1px solid #7295bf",
                                 borderRadius: "50%",
                                 padding: "8px",
                                 margin: "0 4px",
-                                "&:hover": { color: "#1877F2" },
+                                "&:hover": { color: "#1877F2" ,border: "1px solid #1877F2" },
                             }}
                         />
                         <Instagram
                             sx={{
                                 fontSize: "35px",
-                                color: "#7295bf",
+                                color: "#668ebf",
                                 cursor: "pointer",
                                 transition: "color 0.3s",
-                                border: "1px solid #1877F2",
+                                border: "1px solid #7295bf",
                                 borderRadius: "50%",
                                 padding: "8px",
                                 margin: "0 4px",
-                                "&:hover": { color: "#1877F2" },
+                                "&:hover": { color: "#1877F2",border: "1px solid #1877F2"  },
                             }}
                         />
                     </Box>
