@@ -56,7 +56,9 @@ function Psychologicaltests() {
     return (
         <>
             <Container maxWidth="lg">
-                <Box textAlign="center">
+                <Box textAlign="center" sx={{
+                    padding:"80px 0 0 0"
+                }}>
                     <Box sx={{fontSize: "40px", fontWeight: "700"}}>
                         Psychological Tests
                     </Box>

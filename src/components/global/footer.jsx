@@ -43,7 +43,7 @@ const footerData = {
 
 const Footer = () => {
     return (
-        <Box sx={{ padding: "0px 20px 20px 20px"}}>
+        <Box sx={{padding: "0px 20px 20px 20px"}}>
             <Container maxWidth="xl">
                 <Box sx={{
                     padding: "3rem 0 3rem 0"
@@ -112,7 +112,7 @@ const Footer = () => {
                                         fontSize: "16px",
                                         color: "#212529",
                                         fontWeight: "600",
-                                        mb:2
+                                        mb: 2
                                     }}>
                                         {section.title}
                                     </Box>
@@ -162,49 +162,56 @@ const Footer = () => {
                             fontWeight: "300",
                         }}
                     >
-                        © Hiwell
+                        &copy; Hiwell
                     </Box>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <Facebook
-                            sx={{
-                                fontSize: "35px",
-                                color: "#668ebf",
-                                cursor: "pointer",
-                                transition: "color 0.3s",
-                                border: "1px solid #7295bf",
-                                borderRadius: "50%",
-                                padding: "8px",
-                                margin: "0 4px",
-                                "&:hover": { color: "#1877F2",border: "1px solid #1877F2" },
-                            }}
-                        />
-                        <Twitter
-                            sx={{
-                                fontSize: "35px",
-                                color: "#668ebf",
-                                cursor: "pointer",
-                                transition: "color 0.3s",
-                                border: "1px solid #7295bf",
-                                borderRadius: "50%",
-                                padding: "8px",
-                                margin: "0 4px",
-                                "&:hover": { color: "#1877F2" ,border: "1px solid #1877F2" },
-                            }}
-                        />
-                        <Instagram
-                            sx={{
-                                fontSize: "35px",
-                                color: "#668ebf",
-                                cursor: "pointer",
-                                transition: "color 0.3s",
-                                border: "1px solid #7295bf",
-                                borderRadius: "50%",
-                                padding: "8px",
-                                margin: "0 4px",
-                                "&:hover": { color: "#1877F2",border: "1px solid #1877F2"  },
-                            }}
-                        />
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                            <Facebook
+                                sx={{
+                                    fontSize: "35px",
+                                    color: "#668ebf",
+                                    cursor: "pointer",
+                                    transition: "color 0.3s",
+                                    border: "1px solid #7295bf",
+                                    borderRadius: "50%",
+                                    padding: "8px",
+                                    margin: "0 4px",
+                                    "&:hover": { color: "#1877F2", border: "1px solid #1877F2" },
+                                }}
+                            />
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                            <Twitter
+                                sx={{
+                                    fontSize: "35px",
+                                    color: "#668ebf",
+                                    cursor: "pointer",
+                                    transition: "color 0.3s",
+                                    border: "1px solid #7295bf",
+                                    borderRadius: "50%",
+                                    padding: "8px",
+                                    margin: "0 4px",
+                                    "&:hover": { color: "#1877F2", border: "1px solid #1877F2" },
+                                }}
+                            />
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                            <Instagram
+                                sx={{
+                                    fontSize: "35px",
+                                    color: "#668ebf",
+                                    cursor: "pointer",
+                                    transition: "color 0.3s",
+                                    border: "1px solid #7295bf",
+                                    borderRadius: "50%",
+                                    padding: "8px",
+                                    margin: "0 4px",
+                                    "&:hover": { color: "#1877F2", border: "1px solid #1877F2" },
+                                }}
+                            />
+                        </a>
                     </Box>
+
                 </Box>
 
             </Container>
