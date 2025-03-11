@@ -13,7 +13,7 @@ import {
     ListItem, ListItemText, Select, Collapse
 } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
-import logo from '../../assets/global/hiwell-logo.svg'
+import logo from '../../assets/global/logo.jpg'
 import MenuIcon from "@mui/icons-material/Menu";
 import {useState} from "react";
 
@@ -72,14 +72,14 @@ const Navbar = () => {
 
     return (
         <AppBar color="#000" elevation={0} sx={{
-            padding: isScrolled ? "20px 24px" : { lg: "40px 24px", xs: "20px 24px" },
+            padding:"20px 24px",
             position:"sticky",
             zIndex: 999,
             backgroundColor:"#fff"
         }}>
             <Toolbar sx={{justifyContent: "space-between"}}>
-                <Box sx={{height: "50px", width: "131px"}}>
-                    <img src={logo} alt="logo"/>
+                <Box sx={{height: "70px", width: "70px"}}>
+                    <img src={logo} alt="logo" style={{height:"100%" ,width:"100%"}} />
                 </Box>
 
                 <Box sx={{display: {xs: "none", lg: "flex"}, gap: 3}}>

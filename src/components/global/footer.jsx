@@ -1,6 +1,6 @@
 import React from "react";
 import {Box, Grid, Button, Divider, Container} from "@mui/material";
-import logo from "../../assets/global/hiwell-logo.svg";
+import logo from "../../assets/global/logo.jpg";
 import img1 from "../../assets/global/app-apple.svg";
 import img2 from "../../assets/global/app-android.svg";
 import {Facebook, Instagram, Twitter} from "@mui/icons-material";
@@ -14,7 +14,7 @@ const footerData = {
     ],
     sections: [
         {
-            title: "Hiwell",
+            title: "Emotionally Yours",
             links: [
                 "Psychotherapists", "How It Works", "Business", "Blog", "FAQs", "About Us", "Contact Us"
             ]
@@ -55,7 +55,7 @@ const Footer = () => {
                             }}>
                                 <Box
                                     sx={{
-                                        height: "58px",
+                                        height: "70px",
                                         width: "100%",
                                         display: "flex",
                                         alignItems: "center"
@@ -162,7 +162,7 @@ const Footer = () => {
                             fontWeight: "300",
                         }}
                     >
-                        &copy; Hiwell
+                        &copy; Emotionally Yours
                     </Box>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
                         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
