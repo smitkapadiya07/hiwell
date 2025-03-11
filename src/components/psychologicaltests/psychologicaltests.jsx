@@ -1,13 +1,13 @@
 import React from 'react';
 import {Box, Button, Card, CardContent, Container, Grid} from '@mui/material';
-import img1 from '../../assets/psychological tests/img8.png';
-import img2 from '../../assets/psychological tests/img7.png';
-import img3 from '../../assets/psychological tests/img6.png';
-import img4 from '../../assets/psychological tests/img5.png';
-import img5 from '../../assets/psychological tests/img4.png';
-import img6 from '../../assets/psychological tests/img3.png';
-import img7 from '../../assets/psychological tests/img2.png';
-import img8 from '../../assets/psychological tests/img1.png';
+import img1 from '../../assets/psychological tests/img11.svg';
+import img2 from '../../assets/psychological tests/img12.svg';
+import img3 from '../../assets/psychological tests/img13.svg';
+import img4 from '../../assets/psychological tests/img14.svg';
+import img5 from '../../assets/psychological tests/img15.svg';
+import img6 from '../../assets/psychological tests/img16.svg';
+import img7 from '../../assets/psychological tests/img17.svg';
+import img8 from '../../assets/psychological tests/img18.svg';
 
 function Psychologicaltests() {
     const psychologicalTests = [
