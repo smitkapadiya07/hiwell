@@ -43,7 +43,7 @@ const footerData = {
 
 const Footer = () => {
     return (
-        <Box sx={{backgroundColor: "#f8f9fa", padding: "40px 20px 20px 20px"}}>
+        <Box sx={{ padding: "40px 20px 20px 20px"}}>
             <Container maxWidth="xl">
                 <Box sx={{
                     padding: "3rem 0 3rem 0"
