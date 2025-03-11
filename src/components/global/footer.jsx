@@ -150,7 +150,7 @@ const Footer = () => {
                     sx={{
                         display: "flex",
                         justifyContent: "space-between",
-                        alignItems:"center",
+                        alignItems: "center",
                         padding: "0 12px",
                         mt: 2,
                     }}
@@ -164,45 +164,49 @@ const Footer = () => {
                     >
                         © Hiwell
                     </Box>
-                    <Box sx={{display: "flex", alignItems: "center"}}>
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
                         <Facebook
                             sx={{
+                                fontSize: "35px",
                                 color: "#7295bf",
                                 cursor: "pointer",
                                 transition: "color 0.3s",
                                 border: "1px solid #1877F2",
                                 borderRadius: "50%",
-                                padding: "5px 5px",
+                                padding: "8px",
                                 margin: "0 4px",
-                                "&:hover": {color: "#1877F2"},
+                                "&:hover": { color: "#1877F2" },
                             }}
                         />
                         <Twitter
                             sx={{
+                                fontSize: "35px",
                                 color: "#7295bf",
                                 cursor: "pointer",
                                 transition: "color 0.3s",
                                 border: "1px solid #1877F2",
                                 borderRadius: "50%",
-                                padding: "5px 5px",
+                                padding: "8px",
                                 margin: "0 4px",
-                                "&:hover": {color: "#1877F2"},
+                                "&:hover": { color: "#1877F2" },
                             }}
                         />
                         <Instagram
                             sx={{
+                                fontSize: "35px",
                                 color: "#7295bf",
                                 cursor: "pointer",
                                 transition: "color 0.3s",
                                 border: "1px solid #1877F2",
                                 borderRadius: "50%",
-                                padding: "5px 5px",
+                                padding: "8px",
                                 margin: "0 4px",
-                                "&:hover": {color: "#1877F2"},
+                                "&:hover": { color: "#1877F2" },
                             }}
                         />
                     </Box>
                 </Box>
+
             </Container>
         </Box>
     );
