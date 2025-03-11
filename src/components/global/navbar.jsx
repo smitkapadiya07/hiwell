@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
     AppBar,
     Toolbar,
@@ -43,9 +43,17 @@ const Navbar = () => {
     //     setAnchorEl(null);
     // };
 
-    const [anchorEl, setAnchorEl] = useState(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [openSubmenu, setOpenSubmenu] = useState(null);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50); // Adjust scroll threshold as needed
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     // const handleMenuClose = () => {
     //     setAnchorEl(null);
@@ -63,59 +71,79 @@ const Navbar = () => {
     const menuItems = ["How It Works", "About Us", "Psychotherapists", "Business", "Psychological Tests", "Join Us"];
 
     return (
-        <AppBar position="static" color="transparent" elevation={0} sx={{ padding: {lg:"40px 24px" , xs:"20px 24px"} }}>
-            <Toolbar sx={{ justifyContent: "space-between"}}>
-                <Box sx={{ height: "50px", width: "131px" }}>
-                    <img src={logo} alt="logo"  />
+        <AppBar color="#000" elevation={0} sx={{
+            padding: isScrolled ? "20px 24px" : { lg: "40px 24px", xs: "20px 24px" },
+            position:"sticky",
+            zIndex: 999,
+            backgroundColor:"#fff"
+        }}>
+            <Toolbar sx={{justifyContent: "space-between"}}>
+                <Box sx={{height: "50px", width: "131px"}}>
+                    <img src={logo} alt="logo"/>
                 </Box>
 
-                <Box sx={{ display: { xs: "none", lg: "flex" }, gap: 3 }}>
+                <Box sx={{display: {xs: "none", lg: "flex"}, gap: 3}}>
                     {menuItems.map((text, index) => (
-                        <Typography key={index} sx={{ fontWeight: 700, color: "#000" }}>
+                        <Typography key={index} sx={{fontWeight: 700, color: "#000"}}>
                             {text}
                         </Typography>
                     ))}
                 </Box>
 
-                <Box sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center", gap: 2 }}>
-                    <Button variant="outlined" sx={{ color: "#0B5ED7", borderColor: "#0B5ED7" , fontSize:"16px" }}>Login</Button>
-                    <Button variant="contained" sx={{ backgroundColor: "#0B5ED7", color: "white" , fontSize:"16px" }}>Register</Button>
+                <Box sx={{display: {xs: "none", lg: "flex"}, alignItems: "center", gap: 2}}>
+                    <Button variant="outlined"
+                            sx={{color: "#0B5ED7", borderColor: "#0B5ED7", fontSize: "16px"}}>Login</Button>
+                    <Button variant="contained"
+                            sx={{backgroundColor: "#0B5ED7", color: "white", fontSize: "16px"}}>Register</Button>
                 </Box>
 
                 {/* Mobile Menu Icon */}
                 <IconButton
-                    sx={{ display: { xs: "block", lg: "none" } }}
+                    sx={{display: {xs: "block", lg: "none"}}}
                     edge="end"
                     color="inherit"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                    <MenuIcon />
+                    <MenuIcon/>
                 </IconButton>
             </Toolbar>
 
             <Collapse
                 in={mobileMenuOpen}
                 timeout="auto"
+                className={"glassmorphism"}
                 sx={{
-                    display: { xs: "flex", lg: "none" },
+                    display: {xs: "flex", lg: "none"},
                     p: 0,
-                    position:'fixed',
+                    position: 'fixed',
                     top: 84,
                     width: '100%',
                 }}
             >
-                <List className={"glassmorphism"} sx={{ color: "#000", padding: "0 8px" }}>
+                <List sx={{color: "#000", padding: "0 8px"}}>
                     {menuItems.map((item, index) => (
                         <Box key={index}>
-                            <Typography sx={{ padding: "16px 0", fontWeight: 700 }}>
+                            <Typography sx={{padding: "16px 0", fontWeight: 700}}>
                                 {item}
                             </Typography>
                         </Box>
                     ))}
                 </List>
-                <Box sx={{ display: { xs: "flex", lg: "none" }, alignItems: "center", gap: 2 }}>
-                    <Button variant="outlined" sx={{ color: "#0B5ED7", borderColor: "#0B5ED7" , fontSize:"16px" ,borderRadius:"16px", padding:"6px 20px" }}>Login</Button>
-                    <Button variant="contained" sx={{ backgroundColor: "#0B5ED7", color: "white" , fontSize:"16px" ,borderRadius:"16px" , padding:"6px 20px" }}>Register</Button>
+                <Box sx={{display: {xs: "flex", lg: "none"}, alignItems: "center", gap: 2}}>
+                    <Button variant="outlined" sx={{
+                        color: "#0B5ED7",
+                        borderColor: "#0B5ED7",
+                        fontSize: "16px",
+                        borderRadius: "16px",
+                        padding: "6px 20px"
+                    }}>Login</Button>
+                    <Button variant="contained" sx={{
+                        backgroundColor: "#0B5ED7",
+                        color: "white",
+                        fontSize: "16px",
+                        borderRadius: "16px",
+                        padding: "6px 20px"
+                    }}>Register</Button>
                 </Box>
             </Collapse>
 

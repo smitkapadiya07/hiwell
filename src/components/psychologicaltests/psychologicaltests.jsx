@@ -64,7 +64,7 @@ function Psychologicaltests() {
                         fontSize: "20px",
                         fontWeight: "400",
                         lineHeight: "150%",
-                        width: '650px',
+                        width: {sm:'600px', xs:"70%"},
                         margin: "auto",
                         color: '#21252bc2',
                         marginBottom: "75px"
@@ -76,7 +76,7 @@ function Psychologicaltests() {
 
                 <Grid container spacing={3}>
                     {psychologicalTests.map((test, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Grid item xs={12} sm={6} lg={4} key={index}>
                             <Box sx={{border: "1px solid #EFEFEF", borderRadius: 3,}}>
                                 <Box sx={{
                                     textAlign: 'start',
@@ -110,7 +110,7 @@ function Psychologicaltests() {
                                             {test.title}
                                         </Box>
 
-                                        <Box sx={{fontSize: "16px", fontWeight: "400", flexGrow: 2 ,height: '144px'}}>
+                                        <Box sx={{fontSize: "16px", fontWeight: "400", flexGrow: 2 ,height: '150px'}}>
                                             {test.description}
                                         </Box>
 
@@ -118,7 +118,6 @@ function Psychologicaltests() {
                                             fullWidth
                                             variant="contained"
                                             sx={{
-                                                // mt: 3,
                                                 py: 1.5,
                                                 borderRadius: 1,
                                                 fontWeight: 500,

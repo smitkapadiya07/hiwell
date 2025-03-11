@@ -43,7 +43,7 @@ const footerData = {
 
 const Footer = () => {
     return (
-        <Box sx={{ padding: "40px 20px 20px 20px"}}>
+        <Box sx={{ padding: "0px 20px 20px 20px"}}>
             <Container maxWidth="xl">
                 <Box sx={{
                     padding: "3rem 0 3rem 0"
@@ -177,7 +177,7 @@ const Footer = () => {
                                 "&:hover": {color: "#1877F2"},
                             }}
                         />
-                        <Instagram
+                        <Twitter
                             sx={{
                                 color: "#7295bf",
                                 cursor: "pointer",
@@ -189,7 +189,7 @@ const Footer = () => {
                                 "&:hover": {color: "#1877F2"},
                             }}
                         />
-                        <Twitter
+                        <Instagram
                             sx={{
                                 color: "#7295bf",
                                 cursor: "pointer",
