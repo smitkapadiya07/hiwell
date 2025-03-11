@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from "./components/global/footer.jsx";
 import {Route, Routes} from "react-router-dom";
 import Psychologicals from "./pages/psychological/psychologicals.jsx";
 
@@ -8,9 +9,7 @@ function App() {
     <>
 
         <Psychologicals />
-      {/*<Routes>*/}
-      {/*  <Route path="/" element={<Psychologicals />} />*/}
-      {/*</Routes>*/}
+      <Footer />
     </>
   )
 }
